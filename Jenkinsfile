@@ -24,7 +24,9 @@ node {
    stage("Tag & Push image"){
       withDockerRegistry([credentialsId: 'dockerID',url: ""]) {
           sh 'docker tag manee2k6/tradebyte:pyapp manee2k6/tradebyte:pyapp-dev'
+          sh 'docker tag manee2k6/tradebyte:pyapp manee2k6/tradebyte:pyapp-prod'
           sh 'docker push manee2k6/tradebyte:pyapp-dev'
+          sh 'docker push manee2k6/tradebyte:pyapp-prod'
        }
     }
    stage('Deploy to Dev') {
