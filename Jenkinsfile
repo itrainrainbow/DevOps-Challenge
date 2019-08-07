@@ -11,7 +11,7 @@ node {
      sh 'pytest tests/test.py'
     }
    stage('SonarQube Analysis'){
-     def scannerHome = tool 'SonarScanner 4.0';
+     def scannerHome = tool 'pythonscanner';
      withSonarQubeEnv('SonarQube'){
          sh "python hello.py sonar:sonar"
      }
