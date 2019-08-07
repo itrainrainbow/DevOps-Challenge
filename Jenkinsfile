@@ -4,10 +4,7 @@ node {
      git credentialsId: 'githubID', url: 'https://github.com/itrainrainbow/DevOps-Challenge.git'
      
     }
-   stage('Build') {
-     sh 'pwd'
-    }
-   stage('Unit Test run') {
+   stage('Build & UnitTest run') {
      sh 'pytest tests/test.py'
     }
    stage('SonarQube Analysis'){
