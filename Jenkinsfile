@@ -13,7 +13,7 @@ node {
    stage('SonarQube Analysis'){
      def scannerHome = tool 'pythonscanner';
      withSonarQubeEnv('SonarQube'){
-         sh "python hello.py sonar:sonar"
+         //sh "python hello.py sonar:sonar"
      }
     
     }
