@@ -8,7 +8,8 @@ node {
     
     }
    stage('Unit Test run') {
-     sh 'python test.py'
+      withEnv(['UNIT_TEST=/tests']) {
+        sh 'python test.py'
     }
    stage('Code analysis'){
      
