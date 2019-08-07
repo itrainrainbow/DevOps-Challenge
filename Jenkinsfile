@@ -32,7 +32,7 @@ node {
    stage('Deploy to Dev') {
      sh 'oc login --token=IH83WI9I_79p-TkvEMxzBZU5RzZQ0aWTDSmeOjuO0cA --server=https://api.us-east-2.online-starter.openshift.com:6443'
      //sh 'oc new project tradebyte-demo'
-     sh 'oc new-app manee2k6/itrainavenger:dev --name python-app'
+     sh 'oc new-app manee2k6/itrainavenger:latest --name python-app'
      sh 'oc expose svc python-app --name=python-app'
      sh 'oc status'
    }
