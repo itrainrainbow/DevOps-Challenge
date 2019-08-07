@@ -10,7 +10,8 @@ node {
    stage('Unit Test run') {
       withEnv(['UNIT_TEST=/tests']) {
         sh 'python test.py'
-    }
+      }
+   }
    stage('Code analysis'){
      
     }
