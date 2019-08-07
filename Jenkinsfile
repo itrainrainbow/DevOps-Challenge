@@ -8,7 +8,7 @@ node {
      sh 'pwd'
     }
    stage('Unit Test run') {
-     sh 'python /tests/test.py'
+     sh 'python tests/test.py'
     }
    stage('Code analysis'){
      
