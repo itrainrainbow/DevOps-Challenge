@@ -28,8 +28,7 @@ node {
       withDockerRegistry([credentialsId: 'dockerID',url: ""]) {
           sh 'docker tag manee2k6/tradebyte:pyapp manee2k6/tradebyte:pyapp-dev'
           sh 'docker push manee2k6/tradebyte:pyapp-dev'
-          sh 'docker push manee2k6/tradebyte:latest'
-      }
+       }
     }
    stage('Deploy to Dev') {
      
