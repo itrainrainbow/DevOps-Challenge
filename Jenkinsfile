@@ -10,8 +10,11 @@ node {
    stage('Unit Test run') {
      sh 'pytest tests/test.py'
     }
-   stage('Code analysis'){
-     
+   stage('SonarQube Analysis'){
+     withSonarQubeEnv('sonar'){
+         sh "python hello.py sonar:sonar"
+     }
+    
     }
   stage("Quality Gate"){
           
