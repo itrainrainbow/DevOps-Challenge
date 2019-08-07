@@ -5,6 +5,7 @@ node {
      
     }
    stage('Build & UnitTest run') {
+     sh 'python -m py_compile hello.py'
      sh 'pytest tests/test.py'
     }
    stage('SonarQube Analysis'){
