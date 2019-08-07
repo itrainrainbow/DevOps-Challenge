@@ -8,7 +8,7 @@ node {
     
     }
    stage('Unit Test run') {
-     
+     sh 'python test.py'
     }
    stage('Code analysis'){
      
