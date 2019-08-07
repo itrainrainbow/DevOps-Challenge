@@ -9,7 +9,7 @@ node {
     }
    stage('Unit Test run') {
       withEnv(['UNIT_TEST=/tests']) {
-        sh 'python test.py'
+        sh '$UNIT_TEST python test.py'
       }
    }
    stage('Code analysis'){
