@@ -8,10 +8,8 @@ node {
      sh 'pwd'
     }
    stage('Unit Test run') {
-      withEnv(['UNIT_TEST=/var/lib/jenkins/workspace/radebyte_DevOps-Challenge_master/tests']) {
-        sh '$UNIT_TEST python test.py'
-      }
-   }
+     sh 'python test.py'
+    }
    stage('Code analysis'){
      
     }
