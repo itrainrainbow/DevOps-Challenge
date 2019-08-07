@@ -1,4 +1,4 @@
-from redis import Redis, RedisError
+import Redis
 from redis.exceptions import ConnectionError
 import tornado.ioloop
 import tornado.web
