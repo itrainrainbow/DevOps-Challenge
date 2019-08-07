@@ -5,7 +5,7 @@ node {
      
     }
    stage('Build') {
-    
+     sh 'pwd'
     }
    stage('Unit Test run') {
       withEnv(['UNIT_TEST=/tests']) {
